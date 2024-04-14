@@ -1,7 +1,7 @@
 # brain
 a general-purpose machine learning library
 
-# run
+# Run
 ```
 sbcl --script brain-test.lisp
 ```
