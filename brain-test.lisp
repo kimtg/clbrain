@@ -6,8 +6,8 @@
   ;; train
   (with-open-file (stream "mnist/mnist_train.csv")
     (loop for line = (read-line stream nil)
-          for num-rows from 1
           while line
+          for num-rows from 1
           do
           (format t "train ~a~%" num-rows)
           (let* ((split (uiop:split-string line :separator ","))
@@ -20,8 +20,8 @@
   (with-open-file (stream "mnist/mnist_test.csv")
     (let ((num-correct 0))
       (loop for line = (read-line stream nil)
-            for num-rows from 1
             while line
+            for num-rows from 1
             do
             (format t "test ~a~%" num-rows)
             (let* ((split (uiop:split-string line :separator ","))
