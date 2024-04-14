@@ -10,7 +10,7 @@
   (when (/= (length xs) (length ys)) (return-from sum-square-error -1))
   (loop for x across xs
         for y across ys
-        sum (abs (- x y))))
+        sum (square (- x y))))
 
 (defparameter *inputs* (make-array 0 :fill-pointer t :adjustable t))
 (defparameter *outputs* (make-array 0 :fill-pointer t :adjustable t))
