@@ -31,8 +31,7 @@
                    (best (brain:guess input)))
               (when (= best output)
                 (incf num-correct))
-              (format t "predicted: ~a answer: ~a accuracy: ~a~%" best output (coerce (/ num-correct num-rows) 'float))
+              (format t "predicted: ~a answer: ~a accuracy: ~a~%" best output (/ (coerce num-correct 'float) num-rows))
               )))))
 
 (main)
-
