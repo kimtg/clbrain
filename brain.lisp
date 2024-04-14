@@ -28,5 +28,4 @@
           when (or (< min-error 0) (< error min-error))
           do (setf min-error error
                    best (aref *outputs* i)))
-    best
-    ))
+    best))
